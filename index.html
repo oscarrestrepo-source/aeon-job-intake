@@ -3,24 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Request a Proposal | OPI Construction</title>
-<meta name="description" content="Submit your project to OPI Construction — full-service construction firm. Your request goes directly into our estimating pipeline.">
+<title>Request a Proposal | ÆON Construction Company</title>
+<meta name="description" content="Submit your project to ÆON Construction Company — full-service construction firm. Your request goes directly into our estimating pipeline.">
 <style>
   :root {
-    --opi-navy: #1b2a41;
-    --opi-blue: #2563a8;
-    --opi-gray: #5b6570;
-    --opi-light: #f4f6f8;
+    --aeon-navy: #1b2a41;
+    --aeon-blue: #2563a8;
+    --aeon-gray: #5b6570;
+    --aeon-light: #f4f6f8;
+    --aeon-line: #e2e7ec;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-    background: var(--opi-light);
-    color: var(--opi-navy);
+    background: var(--aeon-light);
+    color: var(--aeon-navy);
     line-height: 1.5;
   }
   header {
-    background: var(--opi-navy);
+    background: var(--aeon-navy);
     color: #fff;
     padding: 28px 20px;
     text-align: center;
@@ -37,7 +38,7 @@
     letter-spacing: 0.05em;
   }
   .bar {
-    background: var(--opi-blue);
+    background: var(--aeon-blue);
     height: 4px;
   }
   main {
@@ -47,27 +48,68 @@
   }
   .intro {
     background: #fff;
-    border: 1px solid #e2e7ec;
+    border: 1px solid var(--aeon-line);
     border-radius: 8px;
     padding: 22px 24px;
     margin-bottom: 24px;
   }
   .intro h2 { font-size: 1.15rem; margin-bottom: 8px; }
-  .intro p { color: var(--opi-gray); font-size: 0.95rem; }
+  .intro p { color: var(--aeon-gray); font-size: 0.95rem; }
   .intro ul {
     margin: 12px 0 0 18px;
-    color: var(--opi-gray);
+    color: var(--aeon-gray);
     font-size: 0.9rem;
   }
   .intro li { margin-bottom: 4px; }
   .form-wrap {
     background: #fff;
-    border: 1px solid #e2e7ec;
+    border: 1px solid var(--aeon-line);
     border-radius: 8px;
-    padding: 12px 16px 20px;
+    padding: 24px;
   }
+  .field { margin-bottom: 16px; }
+  .field.half { display: inline-block; width: calc(50% - 8px); vertical-align: top; }
+  .field.half:first-of-type { margin-right: 12px; }
+  label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--aeon-navy);
+    margin-bottom: 5px;
+  }
+  label .req { color: #c0392b; }
+  input, select, textarea {
+    width: 100%;
+    border: 1px solid var(--aeon-line);
+    border-radius: 6px;
+    padding: 9px 11px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: var(--aeon-navy);
+    background: #fff;
+  }
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--aeon-blue);
+    box-shadow: 0 0 0 3px rgba(37, 99, 168, 0.12);
+  }
+  textarea { resize: vertical; min-height: 110px; }
+  .hint { font-size: 0.78rem; color: var(--aeon-gray); margin-top: 4px; }
+  button {
+    width: 100%;
+    background: var(--aeon-blue);
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 4px;
+  }
+  button:hover { background: #1e548e; }
   footer {
-    background: var(--opi-navy);
+    background: var(--aeon-navy);
     color: #c9d3de;
     text-align: center;
     padding: 22px 20px;
@@ -75,12 +117,16 @@
   }
   footer a { color: #fff; text-decoration: none; }
   footer .row { margin-bottom: 4px; }
+  @media (max-width: 560px) {
+    .field.half { display: block; width: 100%; }
+    .field.half:first-of-type { margin-right: 0; }
+  }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>O P I &nbsp;C O N S T R U C T I O N</h1>
+  <h1>Æ O N &nbsp; C O N S T R U C T I O N</h1>
   <p>Full-Service Construction Firm</p>
 </header>
 <div class="bar"></div>
@@ -97,16 +143,69 @@
   </section>
 
   <section class="form-wrap">
-    <!-- Buildertrend Contact Form -->
-    <script type="text/javascript" src="https://buildertrend.net/leads/contactforms/js/btClientContactForm.js"></script>
-    <iframe src="https://buildertrend.net/leads/contactforms/ContactFormFrame.aspx?builderID=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJidWlsZGVySWQiOjEwOTAxM30.dRrmKk1eq_W7Qqzn0GVUm0fqFfCxk_zEvWImyX7BNzU" scrolling="no" id="btIframe" style="background:transparent;border:0px;margin:0 auto;width:100%;"></iframe>
-    <!-- /Buildertrend Contact Form -->
+    <!-- ÆON intake form.
+         ACTION ENDPOINT: set the form `action` below to your chosen form
+         service (e.g. Formspree form ID) before this goes live. The hidden
+         _next field redirects to thanks.html on a successful submission. -->
+    <form action="https://formspree.io/f/[YOUR_FORM_ID]" method="POST">
+      <input type="hidden" name="_next" value="thanks.html">
+      <input type="hidden" name="_subject" value="New proposal request — ÆON Construction Company">
+
+      <div class="field">
+        <label for="name">Full name <span class="req">*</span></label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="field half">
+        <label for="email">Email <span class="req">*</span></label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="field half">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+
+      <div class="field">
+        <label for="company">Company / Organization</label>
+        <input type="text" id="company" name="company">
+      </div>
+
+      <div class="field">
+        <label for="project_address">Project address <span class="req">*</span></label>
+        <input type="text" id="project_address" name="project_address" required>
+      </div>
+
+      <div class="field">
+        <label for="project_type">Project type</label>
+        <select id="project_type" name="project_type">
+          <option value="">Select one…</option>
+          <option>New construction</option>
+          <option>Renovation / remodel</option>
+          <option>Addition</option>
+          <option>Tenant improvement</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="scope">Scope description <span class="req">*</span></label>
+        <textarea id="scope" name="scope" required placeholder="Briefly describe the work, square footage, and anything that affects pricing."></textarea>
+      </div>
+
+      <div class="field">
+        <label for="documents">Do you have drawings, an RFP, or a site list?</label>
+        <input type="text" id="documents" name="documents" placeholder="Yes / No — we'll send a secure upload link if so.">
+        <div class="hint">Do not attach files here. We'll follow up with a secure upload link.</div>
+      </div>
+
+      <button type="submit">Submit Request</button>
+    </form>
   </section>
 </main>
 
 <footer>
-  <div class="row"><strong>OPI Construction</strong> — 210 Hudson St, Jersey City, NJ 07302</div>
-  <div class="row">(888) 371-8442 &nbsp;·&nbsp; <a href="mailto:estimating@opiconstruction.com">estimating@opiconstruction.com</a></div>
+  <div class="row"><strong>ÆON Construction Company</strong> — [ÆON STREET ADDRESS]</div>
+  <div class="row">[ÆON PHONE] &nbsp;·&nbsp; <a href="mailto:[ÆON INTAKE EMAIL]">[ÆON INTAKE EMAIL]</a></div>
 </footer>
 
 </body>
