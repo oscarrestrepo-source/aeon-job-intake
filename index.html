@@ -144,11 +144,14 @@
 
   <section class="form-wrap">
     <!-- ÆON intake form.
-         ACTION ENDPOINT: set the form `action` below to your chosen form
-         service (e.g. Formspree form ID) before this goes live. The hidden
-         _next field redirects to thanks.html on a successful submission. -->
-    <form action="https://formspree.io/f/[YOUR_FORM_ID]" method="POST">
-      <input type="hidden" name="_next" value="thanks.html">
+         DELIVERY: submissions post to FormSubmit (formsubmit.co), which emails
+         them to info@aeonconstruct.com. No account needed, but the FIRST submit
+         triggers a one-time confirmation email to that inbox — click the link in
+         it once to activate delivery. _next redirects to the thank-you page on
+         success (update the domain if the site is hosted elsewhere).
+         To switch providers later, just change the action URL (e.g. Formspree). -->
+    <form action="https://formsubmit.co/info@aeonconstruct.com" method="POST">
+      <input type="hidden" name="_next" value="https://aeonconstruct.com/thanks.html">
       <input type="hidden" name="_subject" value="New proposal request — ÆON Construction Company">
 
       <div class="field">
@@ -204,8 +207,8 @@
 </main>
 
 <footer>
-  <div class="row"><strong>ÆON Construction Company</strong> — [ÆON STREET ADDRESS]</div>
-  <div class="row">[ÆON PHONE] &nbsp;·&nbsp; <a href="mailto:[ÆON INTAKE EMAIL]">[ÆON INTAKE EMAIL]</a></div>
+  <div class="row"><strong>ÆON Construction Company</strong> — 19790 W. Dixie Hwy, Ste 510, Miami, FL 33180</div>
+  <div class="row">305-934-5649 &nbsp;·&nbsp; <a href="mailto:info@aeonconstruct.com">info@aeonconstruct.com</a></div>
 </footer>
 
 </body>
